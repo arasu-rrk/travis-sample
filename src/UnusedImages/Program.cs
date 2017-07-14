@@ -10,7 +10,7 @@ namespace UnusedImages
 {
     class Program
     {
-        private static List<string> _extensions = new List<string>
+        private static readonly List<string> Extensions = new List<string>
         {
             "*.jpg",
             "*.png",
@@ -23,7 +23,7 @@ namespace UnusedImages
 
             var images = new List<string>();
 
-            foreach (var extension in _extensions)
+            foreach (var extension in Extensions)
             {
                 images.AddRange(Directory.GetFiles(rootFolderPath, extension, SearchOption.AllDirectories).ToList());
             }
@@ -38,8 +38,6 @@ namespace UnusedImages
                 var nodes = new HtmlParser().Parse(htmlContent);
 
                 FindImages(nodes);
-
-                var ssss = string.Empty;
             }
             
 
@@ -50,7 +48,7 @@ namespace UnusedImages
         {
             var node = nodeList as HtmlNode;
 
-            if(node)
+            //if(node)
 
             return null;
         }
