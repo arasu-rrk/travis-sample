@@ -48,7 +48,7 @@ namespace UnusedImages
         {
             var node = nodeList as HtmlNode;
 
-            //if(node)
+            //if(node) 
 
             return null;
         }
